@@ -1,5 +1,11 @@
+import PortfolioPage from "./pages/PortfolioPage";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <PortfolioPage />
+    </>
+  );
 }
 
 export default App;
