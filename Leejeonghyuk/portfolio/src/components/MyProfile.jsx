@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Octokit } from "octokit";
-import { useEffect } from "react";
 
 export default function MyProfile() {
   const [profile, setProfile] = useState({});
   const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   async function getProfile() {
     try {
-      const octokit = new Octokit();
+      const octokit = new Octokit({
+        auth: import.meta.env.VITE_GITHUB_TOKEN,
+      });
+
       const res = await octokit.request("GET /users/{username}", {
         username: "likevanilla",
       });
@@ -17,8 +18,7 @@ export default function MyProfile() {
       setProfile(res.data);
     } catch (e) {
       setError(e);
-      setErrorMessage(error);
-      console.log(errorMessage);
+      console.log(e);
     }
   }
 
@@ -26,19 +26,27 @@ export default function MyProfile() {
     getProfile();
   }, []);
 
+  if (error) {
+    return <div>에러 발생: {error.message}</div>;
+  }
+
   return (
     <div className="profileSection">
       <div className="profile">
-        <img
-          className="profileImg"
-          src={profile.avatar_url}
-          alt={`${profile.name} Github Avatar`}
-        />
+        {profile.avatar_url && (
+          <img
+            className="profileImg"
+            src={profile.avatar_url}
+            alt={`${profile.name} Github Avatar`}
+          />
+        )}
         <div className="introduce">
           <div>{profile.name}</div>
-          <a className="githubUrl" href={profile.html_url} target="_blank">
-            Github
-          </a>
+          {profile.html_url && (
+            <a className="githubUrl" href={profile.html_url} target="_blank">
+              Github
+            </a>
+          )}
         </div>
       </div>
     </div>
