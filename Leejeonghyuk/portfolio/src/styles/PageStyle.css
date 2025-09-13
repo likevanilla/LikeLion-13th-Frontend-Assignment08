@@ -1,0 +1,80 @@
+.profileSection {
+  margin: 0;
+  height: 100vh;
+  background-color: #ebebeb;
+  color: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.profileTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  line-height: 2em;
+  border-right: 1px solid #3a3a3a;
+  height: 80vh;
+  width: 35vw;
+  margin: auto;
+  padding-right: 50px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+.profileImg {
+  border-radius: 50%;
+}
+
+.introduce {
+  display: flex;
+  font-size: 2em;
+  justify-content: space-between;
+}
+
+.urls {
+  text-decoration: none;
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+  margin: 8px;
+}
+
+.urls:hover {
+  background-color: #a0a0a0;
+  transition: 0.5s;
+}
+
+.contact {
+  font-size: 2em;
+  color: #5e5e5e;
+}
+
+.contact div {
+  padding: 1rem;
+}
+
+
+.icons {
+
+}
+
+.skill {
+
+}

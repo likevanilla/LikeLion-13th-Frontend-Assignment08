@@ -32,6 +32,11 @@ export default function MyProfile() {
 
   return (
     <div className="profileSection">
+      <h2 className="profileTitle">
+        안녕하세요. <br />
+        프론트엔드 개발자 <br />
+        이정혁 입니다.
+      </h2>
       <div className="profile">
         {profile.avatar_url && (
           <img
@@ -41,12 +46,21 @@ export default function MyProfile() {
           />
         )}
         <div className="introduce">
-          <div>{profile.name}</div>
           {profile.html_url && (
-            <a className="githubUrl" href={profile.html_url} target="_blank">
+            <a className="urls" href={profile.html_url} target="_blank">
               Github
             </a>
           )}
+          <a className="urls" href="https://" target="_blank">
+            Blog
+          </a>
+        </div>
+        <div className="contact">
+          <fieldset>
+            <legend>Contact</legend>
+            <div>Email : wjdgur27507@gmail.com </div>
+            <div>Phone : 010-9571-2750</div>
+          </fieldset>
         </div>
       </div>
     </div>
