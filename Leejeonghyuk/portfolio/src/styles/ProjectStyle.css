@@ -1,0 +1,63 @@
+.projectSection {
+    margin: 0;
+    height: 100vh;
+    background-color: #ebebeb;
+    color: #3a3a3a;
+    display: inline-block;
+    width: 100%;
+}
+
+.projectTitle {
+    padding: 50px;
+    font-size: 3em;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.projectBox {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    box-shadow: 2px 2px 8px gray;
+}
+
+.image {
+    width: 15em;
+    height: 15em;
+    margin: auto 0;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.mainFunction {
+    margin: 8px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+    padding: 8px;
+    margin: 8px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.link:hover {
+    background-color: #a0a0a0;
+    transition: 0.5s;
+}
+
+.url {
+    color: #3a3a3a;
+    text-decoration: none;
+}
