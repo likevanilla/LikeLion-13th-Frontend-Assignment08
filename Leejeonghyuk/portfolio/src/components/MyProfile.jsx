@@ -51,7 +51,11 @@ export default function MyProfile() {
               Github
             </a>
           )}
-          <a className="urls" href="https://" target="_blank">
+          <a
+            className="urls"
+            href="https://likevanilla.github.io/"
+            target="_blank"
+          >
             Blog
           </a>
         </div>

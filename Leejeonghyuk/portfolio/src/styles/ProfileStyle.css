@@ -1,6 +1,6 @@
 .profileSection {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #ebebeb;
   color: #3a3a3a;
   display: flex;

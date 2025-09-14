@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
 
-    *, body {
+    *, html, body {
         margin: 0;
         padding: 0;
         font-family: 'Pretendard';
