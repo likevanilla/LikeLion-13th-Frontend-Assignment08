@@ -33,9 +33,6 @@ export default function MySkills() {
             REACT
           </div>
         </div>
-
-        <br />
-
         <div className="skillBox">
           <div className="skillName">
             <img className="icons" src={Figma} alt="Figma 이미지" />
