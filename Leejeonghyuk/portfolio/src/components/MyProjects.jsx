@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import { Octokit } from "octokit";
 import odigage from "../assets/어디가게 로고.png";
 import avoid_bomb from "../assets/mainlogo.png";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export default function MyProject() {
   const [repos, setRepos] = useState([]);
   const [error, setError] = useState(false);
+  const titleRef = useScrollAnimation(0.3);
+  const project1Ref = useScrollAnimation(0.2);
+  const project2Ref = useScrollAnimation(0.2);
 
   useEffect(() => {
     async function fetchRepos() {
@@ -39,8 +43,10 @@ export default function MyProject() {
   }
   return (
     <div className="projectSection">
-      <h2 className="projectTitle">PROJECTS</h2>
-      <div className="project">
+      <h2 className="projectTitle fade-in" ref={titleRef}>
+        PROJECTS
+      </h2>
+      <div className="project slide-in-left" ref={project1Ref}>
         <div className="projectBox">
           <img className="image" src={odigage} alt="어디가게 로고 이미지" />
           <div className="description">
@@ -74,7 +80,7 @@ export default function MyProject() {
           </div>
         </div>
       </div>
-      <div className="project">
+      <div className="project slide-in-right" ref={project2Ref}>
         <div className="projectBox">
           <img
             className="image"
